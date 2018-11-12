@@ -18,7 +18,7 @@ public class LinePlotTest extends JFrame {
 		Polynom_able p1 = new Polynom("0.2x^4-1.5x^3+3.0x^2-x-5");
 		Polynom_able p= p1.copy();
 		Polynom_able d=new Polynom(p1.derivative());
-		
+
 
 		DataTable data = new DataTable(Double.class, Double.class);
 		DataTable dataD = new DataTable(Double.class, Double.class);
@@ -42,6 +42,14 @@ public class LinePlotTest extends JFrame {
 		plot.getLineRenderers(data).get(0).setColor(color);
 		plot.getPointRenderers(dataD).get(0).setColor(color.RED);
 
+
+		double sum=0;
+		for (double i = -2; i <6; i+=0.01) {
+			if (p.f(i)<0)
+				sum=sum+(p.f(i)*0.01);
+		}
+			sum=Math.abs(sum);
+			System.out.println(sum);
 	}
 
 	public static void main(String[] args) {
