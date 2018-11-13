@@ -473,4 +473,16 @@ public class Polynom implements Polynom_able{
 		}
 		return arr;
 	}
+public double area2(int x0,int x1) {
+	double sum=0;
+	for (double i = -2; i <6; i+=0.01) {
+		if (this.f(i)<0)
+			sum=sum+(this.f(i)*0.01);
+	}
+		sum=Math.abs(sum);
+		return sum;	
 }
+
+	
+}
+

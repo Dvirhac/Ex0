@@ -100,5 +100,13 @@ class PolynomTest {
 		assertEquals(12.48, x, 0.1,"testArea is wrong");
 		
 	}
+	@Test
+	void testArea2() {
+		Polynom p3=new Polynom("0.2x^4-1.5x^3+3.0x^2-x-5");
+		double x= p3.area2(-2, 6);
+		assertEquals(25.183633821940273, x, 0.1,"testArea is wrong");
+		
+	}
+	
 
 }
