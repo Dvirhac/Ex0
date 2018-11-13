@@ -43,14 +43,6 @@ public class LinePlotTest extends JFrame {
 		plot.getPointRenderers(dataD).get(0).setColor(color.RED);
 
 
-		double sum=0;
-		for (double i = -2; i <6; i+=0.01) {
-			if (p.f(i)<0)
-				sum=sum+(p.f(i)*0.01);
-		}
-			sum=Math.abs(sum);
-			System.out.println(sum);
-	}
 
 	public static void main(String[] args) {
 		LinePlotTest frame = new LinePlotTest();
