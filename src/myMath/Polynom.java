@@ -18,7 +18,7 @@ import myMath.Monom;
  */
 public class Polynom implements Polynom_able{
 	private ArrayList<Monom> list;
-	
+
 
 	final Monom_Comperator monsort= new Monom_Comperator();
 	public void sort () {
@@ -30,7 +30,7 @@ public class Polynom implements Polynom_able{
 	 *In addition it arranges the string if it is not in the proper form
 	 * @param s thats represent a String.
 	 */
-	
+
 	public Polynom(String s)  {
 		list=new ArrayList<Monom>();
 		if (s.length()==0) {
@@ -305,7 +305,7 @@ public class Polynom implements Polynom_able{
 	 * in addition, is removing all the Monoms which '0' as coefficient.
 	 */
 	private void noDup() {
-		
+
 		for (int i=0;i<list.size()-1;i++) {
 			for (int j=i+1;j<list.size();j++) {
 				if (list.get(i).get_power()==list.get(j).get_power()){
@@ -320,7 +320,7 @@ public class Polynom implements Polynom_able{
 			if (list.get(i).get_coefficient()==0)
 				list.remove(i);		
 		}
-		
+
 	}
 	/**
 	 * the function return string which represents a polynom 
@@ -473,16 +473,19 @@ public class Polynom implements Polynom_able{
 		}
 		return arr;
 	}
-public double area2(int x0,int x1) {
-	double sum=0;
-	for (double i = -2; i <6; i+=0.01) {
-		if (this.f(i)<0)
-			sum=sum+(this.f(i)*0.01);
-	}
+	/*
+	 * this fucntion return the area below x axis.
+	 */
+	public double area2(int x0,int x1) {
+		double sum=0;
+		for (double i = x0; i <x1; i+=0.01) {
+			if (this.f(i)<0)
+				sum=sum+(this.f(i)*0.01);
+		}
 		sum=Math.abs(sum);
 		return sum;	
-}
+	}
 
-	
+
 }
 

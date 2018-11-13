@@ -43,7 +43,7 @@ public class LinePlotTest extends JFrame {
 		plot.getPointRenderers(dataD).get(0).setColor(color.RED);
 
 
-
+	}
 	public static void main(String[] args) {
 		LinePlotTest frame = new LinePlotTest();
 		frame.setVisible(true);
