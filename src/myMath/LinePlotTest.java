@@ -51,7 +51,10 @@ public class LinePlotTest extends JFrame {
 	}
 	public static void main(String[] args) {
 		String s="0.2x^4-1.5x^3+3.0x^2-x-5";
+		Polynom p=new Polynom("0.2x^4-1.5x^3+3.0x^2-x-5");
 		LinePlotTest frame = new LinePlotTest(s);
 		frame.setVisible(true);
+		double x=p.area2(-2, 6);
+		System.out.println(x);
 	}
 }
