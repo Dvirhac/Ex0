@@ -10,12 +10,17 @@ import de.erichseifert.gral.plots.lines.DefaultLineRenderer2D;
 import de.erichseifert.gral.plots.lines.LineRenderer;
 import de.erichseifert.gral.plots.points.PointRenderer;
 import de.erichseifert.gral.ui.InteractivePanel;
-
+/**
+ * this class graph a Polynom and emphasize the extremum.
+ *  the source of the the library:http://trac.erichseifert.de/gral/wiki/Download. 
+ * @author YuvalAmar&DvirHcohen
+ *
+ */
 public class LinePlotTest extends JFrame {
-	public LinePlotTest() {
+	public LinePlotTest(String s) {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(600, 400);
-		Polynom_able p1 = new Polynom("0.2x^4-1.5x^3+3.0x^2-x-5");
+		Polynom_able p1 = new Polynom(s);
 		Polynom_able p= p1.copy();
 		Polynom_able d=new Polynom(p1.derivative());
 
@@ -45,7 +50,8 @@ public class LinePlotTest extends JFrame {
 
 	}
 	public static void main(String[] args) {
-		LinePlotTest frame = new LinePlotTest();
+		String s="0.2x^4-1.5x^3+3.0x^2-x-5";
+		LinePlotTest frame = new LinePlotTest(s);
 		frame.setVisible(true);
 	}
 }

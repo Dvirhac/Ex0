@@ -485,6 +485,11 @@ public class Polynom implements Polynom_able{
 		sum=Math.abs(sum);
 		return sum;	
 	}
+	public void line() {
+		LinePlotTest frame = new LinePlotTest(this.toString());
+		frame.setVisible(true);
+		
+	}
 
 
 }

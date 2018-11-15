@@ -9,7 +9,6 @@ import javax.swing.plaf.synth.SynthStyle;
 public class Test {
 	public static void main(String[] args) {
 		
-		
 		System.out.println("Monom test :)\n");
 		Monom d= new Monom (2,3);
 		Monom y = new Monom (3,3);
@@ -143,7 +142,7 @@ public class Test {
 		p15.derivative();
 		System.out.println("actual result: "+ p15);
 		
-		Polynom_able p16=new Polynom("x^3-x^2+2");
+		Polynom p16=new Polynom("x^3-x^2+2");
 		System.out.println("\narea test:\n");
 		System.out.println("expected result: 12.48 ");
 		System.out.println("actual result: "+ p16.area(0, 3, 0.6));
@@ -154,5 +153,7 @@ public class Test {
 		Polynom p30=new Polynom("0.2x^4-1.5x^3+3.0x^2-x-5");
 		double x=p30.area2(-2, 6);
 		System.out.println(x);
+		p16.line();
+		
 	}
 }
