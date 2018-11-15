@@ -153,7 +153,7 @@ public class Test {
 		Polynom p30=new Polynom("0.2x^4-1.5x^3+3.0x^2-x-5");
 		double x=p30.area2(-2, 6);
 		System.out.println(x);
-		p16.line();
+		
 		
 	}
 }

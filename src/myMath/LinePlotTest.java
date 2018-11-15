@@ -13,7 +13,7 @@ import de.erichseifert.gral.ui.InteractivePanel;
 /**
  * this class graph a Polynom and emphasize the extremum.
  *  the source of the the library:http://trac.erichseifert.de/gral/wiki/Download. 
- * @author YuvalAmar&DvirHcohen
+ * @author YuvalAmar DvirHcohen
  *
  */
 public class LinePlotTest extends JFrame {
